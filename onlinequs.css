@@ -1,0 +1,39 @@
+body
+{
+  background-image:url('images/bg7.jpg');
+  background-position: cover;
+
+  
+}
+#sec1
+{
+ padding-top:2%;
+
+}
+.flex-container
+{
+ 
+  background-color:black;
+  transition: transparent;
+  opacity:0.5;
+  height: 100%;
+  padding:2%;
+  
+
+}
+label
+{
+  color:white;
+}
+input
+{
+  color:white;
+}
+#save
+{
+  background-color: green;
+  color:black;
+  font-weight: bold;
+  margin-top:1%;
+  width:10%;
+}
