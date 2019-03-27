@@ -21,6 +21,7 @@
             </script>
    </head>
    <body>
+       <form action="register_write_to_db.php" method="POST"
    <header class="col-lg-12">
     <div class="container">
                 <ul>
@@ -42,19 +43,19 @@
             <form method="post" action="register_write_to_db.php" >
              <div class="form-group">
                         <label>Username</label>
-                        <input type="text" name="un" class="form-control" required>
+                        <input type="text" name="Username" class="form-control" required>
               </div>
               <div class="form-group">
                         <label>Email</label>
-                        <input type="email" name="em" class="form-control" required>
+                        <input type="email" name="Email" class="form-control" required>
               </div>
               <div class="form-group">
                         <label>Password</label>
-                        <input type="password" name="pass" class="form-control" required>
+                        <input type="password" name="Pass" class="form-control" required>
               </div>
               <div class="form-group">
                         <label>Mobile no.</label>
-                        <input type="number" name="mno" class="form-control" required>
+                        <input type="number" name="Mob_no" class="form-control" required>
 
                </div>
                <div class="form-group">
@@ -70,22 +71,22 @@
                <div class="form-group">
                         <label>Year</label> (if you are student)
                         <select name="year" class="form-control">
-                        <option>First Year</option>
-                        <option>Second Year</option>
-                        <option>Third Year</option>
-                        <option>Fourth Year</option>
+                            <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
                         </select>
                         </div>
                       
                <div class="form-group">
                         
-                        <input type="radio"  id="teacher" name="profession" onclick="javascript:subject();" value="teacher"><label id="tech">Teacher</label>
-                         <input type="radio"  id="student" name="profession" onclick="javascript:subject();" value="student"><label id="stu">Student</label>
+                        <input type="radio"  id="teacher" value="teacher" name="profession" onclick="javascript:subject();" value="teacher"><label id="tech">Teacher</label>
+                        <input type="radio"  id="student"  value="student" name="profession" onclick="javascript:subject();" value="student"><label id="stu">Student</label>
                          <span id="subject" class="input-group" style="display: none;">
-                            <input type="text" name="sub1" placeholder="Enter subject you teach" class="form-control">
-                            <input type="text" name="sub2" placeholder="Enter subject you teach" class="form-control">
-                            <input type="text" name="sub3"placeholder="Enter subject you teach" class="form-control" >
-                            <input type="text" name="sub4" placeholder="Enter subject you teach" class="form-control" >
+                            <input type="text" name="Sub1" placeholder="Enter subject you teach" class="form-control">
+                            <input type="text" name="Sub2"  placeholder="Enter subject you teach" class="form-control">
+                            <input type="text" name="Sub3"placeholder="Enter subject you teach" class="form-control" >
+                            <input type="text" name="Sub4" placeholder="Enter subject you teach" class="form-control" >
                          </span>
                          
              </div>
