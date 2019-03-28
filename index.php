@@ -54,7 +54,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN</a>
                             <!--<span class="caret"></span></a>-->
                             <ul class="dropdown-menu">
-                              <li><a href="#">User Login</a></li>
+                                <li><a href="login.php">User Login</a></li>
                               <li><a href="#">Login as admin</a></li>
                               </ul>
                           </li>

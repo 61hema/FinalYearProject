@@ -24,17 +24,17 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $tablename = $_POST["profession"];
     if($tablename === 'teacher'){
         echo $tablename;
-      $id=  insertIntoUsers($name, $password, $tablename, $conn);
+      $id=  insertIntoUsers($name,$email, $password, $tablename, $conn);
     
-    $sql = "INSERT INTO teacher (id,Username,Email,Password,Mobile_no,Department,Sub1,Sub2,Sub3,Sub4)";
+    $sql = "INSERT INTO teacher (id,Mobile_no,Department,Sub1,Sub2,Sub3,Sub4)";
     
-$sql.= "VALUES ('$id',$name','$email','$password','$mobile','$dept','$sub1','$sub2','$sub3','$sub4')";
+$sql.= "VALUES ('$id','$mobile','$dept','$sub1','$sub2','$sub3','$sub4')";
     }
     else{
-        $id=  insertIntoUsers($name, $password, $tablename, $conn);
-        $sql = "INSERT INTO student  (id,Username,Email,Password,Mobile_no,Department,Year)";
+        $id=  insertIntoUsers($name,$email, $password, $tablename, $conn);
+        $sql = "INSERT INTO student  (id,Mobile_no,Department,Year)";
     
-$sql.= "VALUES ('$id','$name', '$email', '$password', '$mobile','$dept','$year')";
+$sql.= "VALUES ('$id','$mobile','$dept','$year')";
     }
 if ($conn->query($sql) === TRUE) {
     
@@ -52,15 +52,15 @@ if ($conn->query($sql) === TRUE) {
    
     
  //This function is to insert new user into the users table in db   
-function insertIntoUsers($username,$password,$role,$con){
-     $sql = "INSERT INTO users  (username,password,role)";
+function insertIntoUsers($username,$email,$password,$role,$con){
+     $sql = "INSERT INTO users  (username,email,password,role)";
     
-$sql.= "VALUES ('$username','$password','$role')";
+$sql.= "VALUES ('$username','$email','$password','$role')";
    if ($con->query($sql) === TRUE) {
         $last_id = $con->insert_id;
         return  $last_id;
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $con->error;
 }
 
 }
