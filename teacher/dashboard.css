@@ -1,0 +1,36 @@
+h2
+{
+	border-bottom:  solid;
+	font-weight: bold;
+}
+#flex1
+{
+	background-color: #003333;
+}
+label
+{
+	color:white;
+	display:inline-block;
+	padding-right: 3px; 
+	padding:10px;
+
+}
+img
+{
+	height: 200px;
+	width:250px;
+
+}
+#flex2
+{
+	background-color:brown;
+	
+}
+section
+{
+	margin-left: 15%
+}
+#flex3
+{
+	background-color: #990073;
+}
